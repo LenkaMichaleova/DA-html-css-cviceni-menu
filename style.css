@@ -44,59 +44,42 @@ a:hover {
 	- 1000px
 */
 
-.hlavicka {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.logo, .menu, ul, li{
-  width: 100%;
-}
-
 .logo {
   margin-bottom: 20px;
 }
 
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 ul{
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
   gap: 2px
 }
 
-li {
+a {
   text-align: center;
 }
 
 @media (min-width: 640px) {
+  ul {
+    display: flex;
+  }
+
   li {
-    width: calc(25% - 2px);
+    width: 25%;
   }
 }
 
 @media (min-width: 1000px) {
   .hlavicka {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .logo {
-    width: 55%;
     margin: 0;
-    align-self: center;
-    text-align: start;
   }
 
-  .menu {
-    flex-basis: 45%;
+  a {
+    padding: 10px 30px;
   }
-
-  /* ul:nth-child(1){
-    flex-shrink: 0;
-  } */
 }
