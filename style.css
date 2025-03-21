@@ -43,3 +43,60 @@ a:hover {
 	- 640px
 	- 1000px
 */
+
+.hlavicka {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo, .menu, ul, li{
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px
+}
+
+li {
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  li {
+    width: calc(25% - 2px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .hlavicka {
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 55%;
+    margin: 0;
+    align-self: center;
+    text-align: start;
+  }
+
+  .menu {
+    flex-basis: 45%;
+  }
+
+  /* ul:nth-child(1){
+    flex-shrink: 0;
+  } */
+}
